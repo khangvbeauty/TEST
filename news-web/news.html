@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin Tức</title>
+    <link rel="shortcut icon" type="image/png" href="./img/avt.png"/>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- OWL CAROUSEL -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./grid.css">
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="app.css" />
+     <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //di chuyển lên đầu trang
+      $(window).scroll(function () {
+        $("#top-up").off("click");
+        // Xử lý sự kiện nhấp chuột vào nút Scroll To Top
+        $("#top-up").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 1000);
+          return false;
+        });
+        // Hiển thị nút Scroll To Top khi người dùng cuộn trang xuống
+        if ($(this).scrollTop() > 800) {
+          $("#top-up").fadeIn();
+        } else {
+          $("#top-up").fadeOut();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" class="logo">
+          <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+            class="main-color"
+            >la</span
+          >y
+        </a>
+        <a href="/main-web/main.html" class="company-logo"> Trang chủ </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="ipl"
+              onclick="onNavItemClick('ipl')"
+            >
+              Thể thao
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Tài chính
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Chính trị
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="Tìm kiếm..."
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news-image"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            saepe quis voluptatum quisquam vitae doloremque facilis molestias
+            quae ratione cumque!
+          </p>
+        </div>
+      </div>
+    </template>
+    <!-- GO TO TOP -->
+    <a href="#" title="Đi lên đầu trang" id="top-up" style="text-align: center; font-size: 80px; display: none;">&#710</a>
+      <!-- &#710 là kí đặc biệt trong HTML-->
+    <!-- END GO TO TOP -->
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+      <div class="row">
+        <div class="col-4 col-md-6 colsm-12 it">
+          <div class="content con">
+            <a href="#" class="logo">
+              <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+                class="main-color"
+                >la</span
+              >y
+            </a>
+            <img src="img/dathongbao.png" width="30%" />
+            <p>
+              Theo dõi chúng tôi trên các phương tiện trên: 
+            </p>
+            <div class="social-list">
+              <a
+                href="https://www.facebook.com/kingttn16/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/home"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/_viz.kheng_/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+            <div class="col-3 col-md-6 col-sm-12 it-1">
+              <div class="content">
+                <ul class="footer-menu hj jii">
+                  <li><a href="#" target="_blank">OU TV</a></li>
+                  <li><a href="#" target="_blank">VTVOU</a></li>
+                  <li><a href="#" target="_blank">OU CTV</a></li>
+                  <li><a href="#" target="_blank">OU+</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12 it-2">
+              <div class="content">
+                <ul class="footer-menu hj content-1">
+                  <li><a href="#" target="_blank">OU IT</a></li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Broadcom</i></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Cab</i></a>
+                  </li>
+                  <li><a href="#" target="_blank">SCOU</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="devide">
+      <div class="introduction flex">
+        <div class="cti">
+          <p><a>Tổng biên tập: Trần Trọng Nhân</a></p>
+          <p><a>Phó tổng biên tập: Nguyễn Vĩ Khang</a></p>
+          <p><a href="#">Tổng đài: (024) 3.8355931</a></p>
+          <p><a href="#">Email: truyenhinhOU@vtv.vn</a></p>
+          <p><a href="#">Liên hệ quảng cáo: 033 5607 157 - 091 4066 624</a></p>
+        </div>
+        <div class="cty">
+          <p>
+            <a href="#">Công ty Cổ phần Viễn Thông OU - Người đại diện: Ông Dương Hữu Thành.
+            Trụ sở: Tầng 5, 371 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP HCM.</a>
+          </p>
+          <p>
+            <a href="#">Số giấy chứng nhận đăng ký kinh doanh: 0101778663 do Sở Kế Hoạch Đầu
+            Tư Thành Phố Hồ Chí Minh cấp vào ngày 02/10/2022.</a>
+          </p>
+          <p>
+            <a href="#">Giấy phép cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng
+            Internet cấp lần đầu ngày 18/03/2023, cấp lại theo Giấy phép số
+            99/GP-BTTTT ngày 23/08/2023.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      Copy Right 2023 <a href="https://github.com/khangvbeauty/Project-Big-IT21">Tran Trong Nhan - Nguyen Vi Khang</a>
+    </div>
+    <!-- END COPY RIGHT SECTION -->
+    <!-- APP JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

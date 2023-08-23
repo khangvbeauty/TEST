@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu OU Play</title>
+    <link rel="shortcut icon" type="image/png" href="./img/avt.png"/>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./introduceWebsite.css" />
+    <link rel="stylesheet" href="./grid.css">
+    <!-- JS -->
+    <script>
+    //di chuyển lên đầu trang
+    $(window).scroll(function() {
+      $('#top-up').off('click');
+      // Xử lý sự kiện nhấp chuột vào nút Scroll To Top
+      $('#top-up').click(function() {
+        $('html, body').animate({scrollTop: 0}, 1000);
+        return false;
+    });
+      // Hiển thị nút Scroll To Top khi người dùng cuộn trang xuống
+        if ($(this).scrollTop() > 200) {
+            $('#top-up').fadeIn();
+        } else {
+            $('#top-up').fadeOut();
+        }
+    });
+    </script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="nav">
+          <a href="#" class="logo">
+            <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+              class="main-color"
+              >la</span
+            >y
+          </a>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="/main-web/main.html" id="ab">Trang Chủ</a></li>
+            <li><a href="/sub1-web/sub1.html">Truyền Hình</a></li>
+            <li>
+              <a href="#">Phim</a>
+              <ul class="demo-1">
+                <li>
+                  <a href="/phim-bo-web/phimbo.html">Phim bộ</a>
+                </li>
+                <li>
+                  <a href="#">Phim lẻ</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Xem Thêm</a>
+              <ul class="demo-1">
+                <li>
+                  <a href="#">Trực Tiếp</a>
+                </li>
+                <li>
+                  <a href="/music-web/music.html">Âm Nhạc</a>
+                </li>
+                <li>
+                  <a href="#">Học Tập</a>
+                </li>
+                <li>
+                  <a href="/news-web/news.html">Tin tức</a>
+                </li>
+                <li>
+                  <a
+                    href="/PlayGame/animationBall.html"
+                    >Giải Trí</a
+                  >
+                </li>
+                <li>
+                  <a href="#">PodCast</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/introduceWebsite/introduceWebsite.html" id="choice">Giới thiệu</a></li>
+            <li>
+              <div id="tisearch">
+                <input id="search" type="text" placeholder="Tìm kiếm..." />
+              </div>
+            </li>
+            <li>
+              <a
+                href="/signin/index.html"
+                class="btn btn-hover"
+              >
+                <span>Đăng nhập</span>
+              </a>
+            </li>
+          </ul>
+          <!-- MOBILE MENU TOGGLE -->
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END NAV -->
+    <!-- GIỚI THIỆU -->
+    <div id="introduce">
+      <h1>Giới thiệu</h1>
+      <p>
+        OU Play - Đài truyền hình Đại học Mở TP.HCM là đài truyền hình truyền
+        thông chủ lực đa phương tiện, thực hiện chức năng thông tin, tuyên
+        truyền và giải trí do các sinh viên.
+        <a
+          href="http://it.ou.edu.vn/"
+          title="Khoa CNTT Đại học Mở TPHCM"
+          target="blank"
+          style="color: #c0392b"
+          >Khoa Công nghệ thông tin</a
+        >
+        thực hiện
+      </p>
+      <p><a href="https://ou.edu.vn/co-so-3/" target="blank">Địa chỉ: Tầng 5, <span style="color: #c0392b">Trường Đại học Mở TP.HCM số 371 Nguyễn Kiệm, Gò Vấp, TP.HCM</span></a></p>
+      <p>Ban Thư ký biên tập được tổ chức 05 phòng; Văn phòng được tổ chức 03 phòng.</p>
+      <p>Đài Truyền hình OU Play có 1 Tổng Giám đốc và không quá 3 Phó Tổng Giám đốc.</p>
+      <p>Tổng Giám đốc bổ nhiệm, miễn nhiệm, cách chức người đứng đầu, cấp phó của người đứng đầu và quy định chức năng, nhiệm vụ, quyền hạn, cơ cấu tổ chức, mối quan hệ công tác của các đơn vị trực thuộc.</p>
+      <div class="content-big">
+        <div class="intro-content">
+          <h1>Quảng cáo OU Play</h1>
+          <div class="banner">
+            <div class="left">
+              <img src="img/khoai.webp" alt="" style="width: 1100px" />
+            </div>
+            <div class="right">
+              <h4>
+                <a href="#"
+                  >"Sân chơi" của trẻ em ở nông thôn qua lăng kính của chàng
+                  Travel Blogger</a
+                >
+              </h4>
+              <h5>Văn hóa - Giải trí</h5>
+              <h6>
+                Ou Play - Hơn 800 ngày đi dọc Bắc Trung Nam, Khoai Lang Thang có
+                cơ hội khám phá vẻ đẹp, văn hoá, ẩm thực khắp ba miền. Bước chân
+                của Khoai về những vùng quê đất mẹ như giúp anh được quay trở
+                lại thời thơ ấu, Khoai nhìn thấy hình ảnh của chính mình nhất là
+                khi anh tiếp xúc với tụi con nít nông thôn....
+              </h6>
+            </div>
+          </div>
+          <div class="banner">
+            <div class="left">
+              <img src="img/giá vàng.jpg" alt="" style="width: 400px" />
+            </div>
+            <div class="right">
+              <h4><a href="#">Giá vàng trong nước ngược chiều thế giới</a></h4>
+              <h5>Kinh tế</h5>
+              <h6>
+                Ou Play - Giá vàng trong nước sáng nay (31/7) giảm, trong khi
+                giá vàng thế giới phiên đầu tuần có xu hướng tăng.....
+              </h6>
+            </div>
+          </div>
+          <div class="banner">
+            <div class="left">
+              <img src="img/manchesterCity.png" alt="" style="width: 510px" />
+            </div>
+            <div class="right">
+              <h4><a href="#">Manchester City và cú ăn 3 trong lịch sử</a></h4>
+              <h5>Thể thao</h5>
+              <h6>
+                Ou Play - Với cú ăn ba lịch sử năm 2023 Manchester City vượt mặt
+                đội bóng hoàng gia Real Madrid trở thành đội bóng có giá trị đắt
+                nhất thế giới.....
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="like-content">
+          <h1>Các bài viết nhiều tương tác</h1>
+          <div class="banner">
+            <div class="left">
+              <img src="img/khoai.webp" alt="" style="width: 1100px" />
+            </div>
+            <div class="right">
+              <h4>
+                <a href="#"
+                  >"Sân chơi" của trẻ em ở nông thôn qua lăng kính của chàng
+                  Travel Blogger</a
+                >
+              </h4>
+              <h5>Văn hóa - Giải trí</h5>
+              <h6>
+                Ou Play - Hơn 800 ngày đi dọc Bắc Trung Nam, Khoai Lang Thang có
+                cơ hội khám phá vẻ đẹp, văn hoá, ẩm thực khắp ba miền. Bước chân
+                của Khoai về những vùng quê đất mẹ như giúp anh được quay trở
+                lại thời thơ ấu, Khoai nhìn thấy hình ảnh của chính mình nhất là
+                khi anh tiếp xúc với tụi con nít nông thôn....
+              </h6>
+            </div>
+          </div>
+          <div class="banner">
+            <div class="left">
+              <img src="img/giá vàng.jpg" alt="" style="width: 400px" />
+            </div>
+            <div class="right">
+              <h4><a href="#">Giá vàng trong nước ngược chiều thế giới</a></h4>
+              <h5>Kinh tế</h5>
+              <h6>
+                Ou Play - Giá vàng trong nước sáng nay (31/7) giảm, trong khi
+                giá vàng thế giới phiên đầu tuần có xu hướng tăng.....
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="bientap">
+          <h1>Lãnh đạo Đài OU Play</h1>
+          <div class="hi flex">
+            <img src="img/TN.jpg" alt="" />
+            <h3>Tổng biên tập: <span style="margin-left: 10px"><a href="https://www.facebook.com/kingttn16" target="_blank">Trần Trọng Nhân</a></span></h3>
+          </div>
+          <div class="hi flex">
+            <img src="img/VK.jpg" alt="" />
+            <h3>Phó tổng biên tập: <span><a href="https://www.facebook.com/vikhang.nguyen.50596" target="_blank">Nguyễn Vĩ Khang</a></span></h3>
+          </div>
+        </div>
+    </div>
+    <!-- END GIỚI THIỆU -->
+    <h1 id="block">00/00/0000 00:00:00</h1>
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+      <div class="row">
+        <div class="col-4 col-md-6 colsm-12 it">
+          <div class="content con">
+            <a href="#" class="logo">
+              <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+                class="main-color"
+                >la</span
+              >y
+            </a>
+            <img src="img/dathongbao.png" width="30%" />
+            <p>
+              Theo dõi chúng tôi trên các phương tiện trên: 
+            </p>
+            <div class="social-list">
+              <a
+                href="https://www.facebook.com/kingttn16/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/home"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/_viz.kheng_/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+            <div class="col-3 col-md-6 col-sm-12 it-1">
+              <div class="content">
+                <ul class="footer-menu hj jii">
+                  <li><a href="#" target="_blank">OU TV</a></li>
+                  <li><a href="#" target="_blank">VTVOU</a></li>
+                  <li><a href="#" target="_blank">OU CTV</a></li>
+                  <li><a href="#" target="_blank">OU+</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12 it-2">
+              <div class="content">
+                <ul class="footer-menu hj content-1">
+                  <li><a href="#" target="_blank">OU IT</a></li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Broadcom</i></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Cab</i></a>
+                  </li>
+                  <li><a href="#" target="_blank">SCOU</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="devide">
+      <div class="introduction flex">
+        <div class="cti">
+          <p><a>Tổng biên tập: Trần Trọng Nhân</a></p>
+          <p><a>Phó tổng biên tập: Nguyễn Vĩ Khang</a></p>
+          <p><a href="#">Tổng đài: (024) 3.8355931</a></p>
+          <p><a href="#">Email: truyenhinhOU@vtv.vn</a></p>
+          <p><a href="#">Liên hệ quảng cáo: 033 5607 157 - 091 4066 624</a></p>
+        </div>
+        <div class="cty">
+          <p>
+            <a href="#">Công ty Cổ phần Viễn Thông OU - Người đại diện: Ông Dương Hữu Thành.
+            Trụ sở: Tầng 5, 371 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP HCM.</a>
+          </p>
+          <p>
+            <a href="#">Số giấy chứng nhận đăng ký kinh doanh: 0101778663 do Sở Kế Hoạch Đầu
+            Tư Thành Phố Hồ Chí Minh cấp vào ngày 02/10/2022.</a>
+          </p>
+          <p>
+            <a href="#">Giấy phép cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng
+            Internet cấp lần đầu ngày 18/03/2023, cấp lại theo Giấy phép số
+            99/GP-BTTTT ngày 23/08/2023.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- GO TO TOP -->
+    <a href="#" title="Đi lên đầu trang" id="top-up" style="text-align: center; font-size: 80px; display: none;">&#710</a>
+      <!-- &#710 là kí đặc biệt trong HTML-->
+    <!-- END GO TO TOP -->
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      Copy Right 2023 <a href="https://github.com/khangvbeauty/Project-Big-IT21">Tran Trong Nhan - Nguyen Vi Khang</a>
+    </div>
+    <!-- END COPY RIGHT SECTION -->
+  </body>
+  <script>
+    setInterval(function timer() {
+      let d = new Date();
+      let c = (document.getElementById("block").innerHTML = `${d.getDate()}/0${
+        d.getMonth() + 1
+      }/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
+    }, 1000);
+    document.querySelector("#ab").addEventListener("click", (event) => {
+    event.preventDefault();
+    location.reload();
+    });
+  </script>
+  <script src="./app.js"></script>
+</html>

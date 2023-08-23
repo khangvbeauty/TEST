@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phim bộ</title>
+    <link rel="shortcut icon" type="image/png" href="./img/avt.png"/>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- OWL CAROUSEL -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="app.css" />
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(window).scroll(function() {
+      $('#top-up').off('click');
+      // Xử lý sự kiện nhấp chuột vào nút Scroll To Top
+      $('#top-up').click(function() {
+        $('html, body').animate({scrollTop: 0}, 1000);
+        return false;
+    });
+      // Hiển thị nút Scroll To Top khi người dùng cuộn trang xuống
+        if ($(this).scrollTop() > 800) {
+            $('#top-up').fadeIn();
+        } else {
+            $('#top-up').fadeOut();
+        }
+    });
+    </script>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="nav">
+          <a href="#" class="logo">
+            <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+              class="main-color"
+              >la</span
+            >y
+          </a>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="/main-web/main.html" id="ab">Trang Chủ</a></li>
+            <li><a href="/sub1-web/sub1.html">Truyền Hình</a></li>
+            <li>
+              <a href="#">Phim</a>
+              <ul class="demo-1">
+                <li>
+                  <a href="/phim-bo-web/phimbo.html" id="phimbo">Phim bộ</a>
+                </li>
+                <li>
+                  <a href="#">Phim lẻ</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Xem Thêm</a>
+              <ul class="demo-1">
+                <li>
+                  <a href="#">Trực Tiếp</a>
+                </li>
+                <li>
+                  <a href="#">Âm Nhạc</a>
+                </li>
+                <li>
+                  <a href="#">Học Tập</a>
+                </li>
+                <li>
+                  <a href="/news-web/news.html">Tin tức</a>
+                </li>
+                <li>
+                  <a href="/PlayGame/animationBall.html">Giải Trí</a>
+                </li>
+                <li>
+                  <a href="#">PodCast</a> 
+                </li>
+              </ul>
+            </li>
+            <li><a href="/introduceWebsite/introduceWebsite.html">Giới thiệu</a></li>
+            <li><div id="tisearch"><input id="search" type="text" placeholder="Tìm kiếm..."></div></li>
+            <li>
+              <a
+                href="/signin/index.html"
+                class="btn btn-hover"
+              >
+                <span>Đăng nhập</span>
+              </a>
+            </li>
+          </ul>
+          <!-- MOBILE MENU TOGGLE -->
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END NAV -->
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+      <div class="hero-slide">
+        <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+         
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./img/phim1.webp" alt="Vẻ đẹp đích thực" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">Vẻ đẹp đích thực</div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-star"></i>
+                    <span>9.5</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-time" style="margin-left: 5px"></i>
+                    <span>16 tập</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">HD</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">Hàn Quốc</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-6">
+                  Im Ju Gyeong thường xuyên bị chê bai, trêu chọc, thậm chí trở thành nạn nhân của bắt nạt học đường vì ngoại hình xấu xí.
+Sau khi chuyển đến ngôi trường mới, cô tập trang điểm để thay đổi diện mạo. Lớp trang điểm thần kỳ đã khiến Ju Gyeong trở thành nữ thần mới của trường học.
+Thế nhưng mọi chuyện bắt đầu rắc rối khi cô nảy sinh tình cảm với Su Ho, nam sinh đẹp trai, con nhà giàu.
+                </div>
+                <div class="item-action top-down delay-8">
+                  <a href="#" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Xem ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./img/phim2.webp" alt="Con Số Bí Mật" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">Con Số Bí Mật</div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-star"></i>
+                    <span>9.0</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-time" style="margin-left: 5px"></i>
+                    <span>12 tập</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">HD</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">Hàn Quốc</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-6">
+                 Nhờ có trí nhớ xuất sắc, tài quan sát nhạy bén và khả năng bẩm sinh với số liệu, Jang Ho Woo được công ty kế toán Taeil tuyển dụng dù chỉ mới tốt nghiệp trung học phổ thông. Không lâu sau khi vào làm, Ho Woo phát hiện ra một mạng lưới tham nhũng có hệ thống và cách duy nhất để ngăn chặn họ là phải làm sụp đổ một trong những công ty kế toán uy tín nhất Hàn Quốc.
+                </div>
+                <div class="item-action top-down delay-8">
+                  <a href="#" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Xem ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./img/phim3.webp" alt="Bảo Vệ Thành Chủ Đại Nhân" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">Bảo Vệ Thành Chủ Đại Nhân</div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-star"></i>
+                    <span>8.5</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-time" style="margin-left: 5px"></i>
+                    <span>24 tập</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">Hàn Quốc</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">16+</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-6">
+                 Hai thành trì Mộc Hề, Hiên Nguyệt vốn có ân oán từ nhiều năm nay và có âm mưu thôn tính lẫn nhau. Thành chủ cũ của Mộc Hề chỉ có cô con gái độc nhất là Chiêu Nam, vì đại cuộc mà ngay từ nhỏ nàng phải cải nam trang với hy vọng kế nghiệp thành chủ của cha. Một lần Chiêu Nam vô ý rơi xuống vách đá, nàng được Liễu Hiên Minh, thành chủ của Hiên Nguyệt cứu giúp. Chiêu Nam vì hòa bình của hai thành mà phải che giấu thân phận thật của mình. Từ đây, một mối duyên nợ kỳ lạ bắt đầu.
+                </div>
+                <div class="item-action top-down delay-8">
+                  <a href="#" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Xem ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./img/phim4.webp" alt="Gia Đình Là Số 1 Phần 3" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">Gia Đình Là Số 1 Phần 3</div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-star"></i>
+                    <span>9</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-time" style="margin-left: 5px"></i>
+                    <span>60 tập</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">HD</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">Hàn Quốc</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-6">
+                  Cuộc sống của ba anh em chí cốt Duy Dương, Á Quân và Quang Khải vốn dĩ êm đềm cho đến một ngày Đậu Bắp - cậu con trai của người bạn quá cố, xuất hiện. Bé con "từ trên trời rơi xuống" này đã tạo nên đủ mọi rắc rối, hiểu lầm cũng như bao nhiêu niềm vui, nỗi buồn cho ba ông bố đỡ đầu "bất đắc dĩ".
+                </div>
+                <div class="item-action top-down delay-8">
+                  <a href="#" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Xem ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./img/phim5.webp" alt="Cuộc Chiến Thượng Lưu 3" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">Cuộc Chiến Thượng Lưu 3</div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-star"></i>
+                    <span>10</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <i class="bx bxs-time" style="margin-left: 5px"></i>
+                    <span>28 tập</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">HD</span>
+                  </div>
+                  <div class="movie-info top-down delay-4">
+                    <span style="margin-left: 5px">18+</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-6">
+                 Cuộc Chiến Thượng Lưu 3 là một bộ phim điện ảnh chính kịch, gia đình của Việt Nam năm 2023 do Trấn Thành sản xuất kiêm đạo diễn. Đây là bộ phim thứ hai do Trấn Thành làm đạo diễn sau Bố già, 
+                 bộ phim có doanh thu cao thứ hai lịch sử phòng vé Việt Nam sau khi bị Cuộc Chiến Thượng Lưu 3 vượt mặt. Bộ phim xoay quanh bà bán bánh canh cua tên Ngọc Nữ với những câu chuyện hỷ nộ ái ố xung quanh cuộc sống thường ngày. Theo tiết lộ của nhà sản xuất, Ngọc Nữ được lấy cảm hứng từ người phụ nữ bán bánh canh cua giá 300.000 đồng 
+                 gây tranh cãi trên mạng xã hội và nội dung được lấy ý tưởng từ câu chuyện gia đình của một người bạn trong giới giải trí Việt Nam của Trấn Thành.
+                </div>
+                <div class="item-action top-down delay-8">
+                  <a href="#" class="btn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Xem ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+        </div>
+        <!-- Top Bộ Phim-->
+
+        <!-- LASTEST MOVIE SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">Top 10 bộ phim xu hướng</div>
+        <div class="movie-slide carousel-nav-center owl-carousel hi">
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top1.png" alt=""/>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top2.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top3.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top4.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top5.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          
+          <div class="movie-item">
+            <img src="img/top6.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top7.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top8.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top9.png" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/top10.png" alt="" />
+          </div>
+          <!-- MOVIES ITEM -->        
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-header" style="margin-top: 15px;">Phim lồng tiếng/Thuyết Minh</div>
+        <div class="movie-slide carousel-nav-center owl-carousel">
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng1.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng2.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng3.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng4.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng5.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          
+          <div class="movie-item">
+            <img src="img/longtieng6.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng7.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng8.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng9.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="img/longtieng10.webp" alt="" />
+          </div>
+          <!-- END MOVIES ITEM -->
+          
+          <!-- MOVIES ITEM -->        
+        </div>
+      </div>
+    </div>
+    <!-- LASTEST MOVIE SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">Những bộ phim ma ám ảnh</div>
+        <div class="movie-slide carousel-nav-center owl-carousel">
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma1.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Khách sạn ma quái</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>16 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma2.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Lời Nguyền Ma Lai</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>8.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>42 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma3.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Đường Triều Quỷ Sự Lục</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>8</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>36 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma4.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Bắt ma phá án</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>16 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma5.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Ma Nữ Đáng Yêu</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>10</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>16 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma6.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Ma Búp Bê (Phần 1)</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>10</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>8 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">18+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma7.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Oan Hồn Ma Nữ</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>39 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">13+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+             <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma8.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Đầu Quỷ</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>16 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+             <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma9.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Thước Vải Ma Mị</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>42 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+             <!-- MOVIES ITEM -->
+          <div class="movie-item" style="padding-top: 150%;">
+            <img src="./img/ma10.webp" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Mặt Trời của Chàng Joo</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>8.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>32 tập</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+        </div>
+      </div>
+    </div>
+    <!-- END LASTEST MOVIE SECTION -->  
+    <!-- LASTEST TV SERIES SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">Thể Loại</div>
+        <div class="movie-slide carousel-nav-center owl-carousel">
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai1.webp" alt=""  />
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai2.webp" alt="" style="border-radius: 5%;"/>
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai3.webp" alt="" style="border-radius: 5%;" />
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai4.webp" alt="" style="border-radius: 5%;"/>
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai5.webp" alt="" style="border-radius: 5%;" />
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai6.webp" alt="" style="border-radius: 5%;" />
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai7.webp" alt="" style="border-radius: 5%;" />
+          </div>
+          <!-- END MOVIES ITEM -->
+           <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/loai8.webp" alt="" style="border-radius: 5%;" />
+          </div>
+          <!-- END MOVIES ITEM -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- END LASTEST SERIES SECTION -->
+    <!-- LASTEST DRAMA SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">Phim chiếu rạp</div>
+        <div class="movie-slide carousel-nav-center owl-carousel">
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/conan.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Conan Thám tử lừng danh</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>150 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/captain America.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Captain America</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>8.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>105 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/transformer.png" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Transformer 4</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>8</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>122 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/spider man.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Spider Man</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>120 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/bố già.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Bố Già</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>10</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>121 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/onepiecegold.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">One Piece Gold</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>10</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>116 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+          <!-- MOVIES ITEM -->
+          <div class="movie-item">
+            <img src="./img/wonderwoman.jpg" alt="" />
+            <div class="movie-item-content">
+              <div class="movie-item-title">Wonder Woman</div>
+              <div class="movie-infos">
+                <div class="move-info">
+                  <i class="bx bxs-star" style="color: red"></i>
+                  <span>9.5</span>
+                </div>
+                <div class="move-info">
+                  <i
+                    class="bx bxs-time"
+                    style="margin-left: 5px; color: red"
+                  ></i>
+                  <span>112 mins</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">HD</span>
+                </div>
+                <div class="move-info">
+                  <span style="margin-left: 5px">16+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MOVIES ITEM -->
+        </div>
+      </div>
+    </div>
+    <!-- END LASTEST DRAMA SECTION -->
+    <!-- END SPECIAL MOVIE SECTION -->
+    <!-- PRICING SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="pricing">
+          <div class="pricing-header">
+            Gói OU P<span class="main-color">la</span>y
+          </div>
+          <div class="pricing-list">
+            <div class="row" id="row-json">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END PRICING SECTION -->
+    <!-- GO TO TOP -->
+    <a href="#" title="Đi lên đầu trang" id="top-up" style="text-align: center; font-size: 80px; display: none; color: #c0392b">&#710</a>
+      <!-- &#710 là kí đặc biệt trong HTML-->
+    <!-- END GO TO TOP -->
+    <div id="block"><h1 id="hours">00/00/0000 00:00:00</h1></div>
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+      <div class="row">
+        <div class="col-4 col-md-6 colsm-12 it">
+          <div class="content con">
+            <a href="#" class="logo">
+              <i class="bx bx-movie-play bx-tada main-color"></i>OU P<span
+                class="main-color"
+                >la</span
+              >y
+            </a>
+            <img src="img/dathongbao.png" width="30%" />
+            <p>
+              Theo dõi chúng tôi trên các phương tiện trên: 
+            </p>
+            <div class="social-list">
+              <a
+                href="https://www.facebook.com/kingttn16/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/home"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/_viz.kheng_/"
+                target="_blank"
+                class="social-item"
+              >
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+            <div class="col-3 col-md-6 col-sm-12 it-1">
+              <div class="content">
+                <ul class="footer-menu hj jii">
+                  <li><a href="#" target="_blank">OU TV</a></li>
+                  <li><a href="#" target="_blank">VTVOU</a></li>
+                  <li><a href="#" target="_blank">OU CTV</a></li>
+                  <li><a href="#" target="_blank">OU+</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-3 col-md-6 col-sm-12 it-2">
+              <div class="content">
+                <ul class="footer-menu hj content-1">
+                  <li><a href="#" target="_blank">OU IT</a></li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Broadcom</i></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">OU <i>Cab</i></a>
+                  </li>
+                  <li><a href="#" target="_blank">SCOU</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="devide">
+      <div class="introduction flex">
+        <div class="cti">
+          <p><a>Tổng biên tập: Trần Trọng Nhân</a></p>
+          <p><a>Phó tổng biên tập: Nguyễn Vĩ Khang</a></p>
+          <p><a href="#">Tổng đài: (024) 3.8355931</a></p>
+          <p><a href="#">Email: truyenhinhOU@vtv.vn</a></p>
+          <p><a href="#">Liên hệ quảng cáo: 033 5607 157 - 091 4066 624</a></p>
+        </div>
+        <div class="cty">
+          <p>
+            <a href="#">Công ty Cổ phần Viễn Thông OU - Người đại diện: Ông Dương Hữu Thành.
+            Trụ sở: Tầng 5, 371 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP HCM.</a>
+          </p>
+          <p>
+            <a href="#">Số giấy chứng nhận đăng ký kinh doanh: 0101778663 do Sở Kế Hoạch Đầu
+            Tư Thành Phố Hồ Chí Minh cấp vào ngày 02/10/2022.</a>
+          </p>
+          <p>
+            <a href="#">Giấy phép cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng
+            Internet cấp lần đầu ngày 18/03/2023, cấp lại theo Giấy phép số
+            99/GP-BTTTT ngày 23/08/2023.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      Copy Right 2023 <a href="https://github.com/khangvbeauty/Project-Big-IT21">Tran Trong Nhan - Nguyen Vi Khang</a>
+    </div>
+    <!-- END COPY RIGHT SECTION -->
+    <!-- APP JS -->
+    
+    <!-- APP JS AND JQUERY -->
+    <script src="./bonus.js"></script>
+    <script src="./app.js"></script>  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>
